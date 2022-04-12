@@ -1,20 +1,23 @@
 #include "main.h"
 
+
 /**
-* main - Print alphabet in lower case
-*
-* Return: Always 0 (Success)
-*/
+ * main - Entry point
+ *
+ * Return: nothing, return void
+ */
 
 int main(void)
 {
-	int i;
-	char p[] = "abcdefghijklmnopqrstuvwxyz";
+_putchar('_');
+_putchar('p');
+_putchar('u');
+_putchar('t');
+_putchar('c');
+_putchar('h');
+_putchar('a');
+_putchar('r');
+_putchar('\n');
 
-	for (i = 0; i < 27; i++)
-		{
-		putchar(p[i]);
-		}
-		putchar('\n');
-	return (0);
+return (0);
 }
