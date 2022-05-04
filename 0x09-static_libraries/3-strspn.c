@@ -2,29 +2,34 @@
 #include <stdio.h>
 
 /**
- * _strspn - Get the length of a prefix substring
- *
- * @s: The character to print
- *
- * @accept: Character
- *
- * Return: unsigned int
+ * *_strspn - gets length of a prefix substring
+ * @s: string to be searched
+ * @accept: string containing value to be searched
+ * 
+ * Return: returns number of bytes in intial segment
  */
-
 unsigned int _strspn(char *s, char *accept)
 {
-unsigned int i, j;
+	int a, b, c, value;
 
-for (i = 0; s[i] != '\0'; i++)
-{
-for (j = 0; accept[j] != s[i]; j++)
-{
-if (accept[j] == '\0')
-return (i);
-}
+	c = 0;
 
-}
+	for (a = 0 ; s[a] != '\0'; a++)
+	{
+		value = 0;
+		for (b = 0; accept[b] != '\0'; b++)
+		{
+			if (s[a] == accept[b])
+			{
+				c++;
+				value = 1;
+			}
+		}
+		if (value == 0)
+		{
+			return (c);
+		}
+	}
 
-return (i);
-
+	return (0);
 }
